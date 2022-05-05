@@ -6,6 +6,32 @@ from requests import get
 
 # OFFLINE CHECKS
 # Get user input (card number), and check errors (input validation)
+def input_validation():
+    
+    # initital
+    card_num = "testnum"
+    in_range = False
+    
+    while card_num.isdigit() == False or in_range == False or int(card_num) == 0:
+        # get user input and remove spaces
+        card_num = input("Please enter payment card number (11-19 digits): ").replace(" ", "")
+           
+        # digit check
+        if card_num.isdigit() == False:
+            print("Sorry your input is not a digit!")
+            
+        # range check
+        if card_num.isdigit() == True:
+            if len(card_num) >= 11 and len(card_num) <= 19:
+                in_range = True
+            else:
+                print("You are out of range (11-19 digits)")
+                in_range == False
+                
+    return int(card_num)
+
+CARD_NUMBER = input_validation()
+
 # Calculate IIN (Issuer Identification Number) / BIN (Bank identification number)
 # Calculate MII (Major industry identifier)
 # Calculate Card Brand (Visa, MasterCard, Maestro, etc.)
