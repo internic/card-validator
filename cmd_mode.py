@@ -33,6 +33,14 @@ def input_validation():
 CARD_NUMBER = input_validation()
 
 # Calculate IIN (Issuer Identification Number) / BIN (Bank identification number)
+eight = num[:8]
+six = num[:6]
+
+def bin_check(bintype): # eight for 8 digit BIN, six for six digit BIN
+    return int("".join([str(i) for i in bintype]))
+
+CARD_BIN = bin_check(six)
+
 # Calculate MII (Major industry identifier)
 # Calculate Card Brand (Visa, MasterCard, Maestro, etc.)
 # Card validation by Luhn Algorithm 
