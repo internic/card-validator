@@ -32,6 +32,8 @@ def input_validation():
 
 CARD_NUMBER = input_validation()
 
+num = [int(x) for x in str(CARD_NUMBER)] # convert integers to list
+
 # Calculate IIN (Issuer Identification Number) / BIN (Bank identification number)
 eight = num[:8]
 six = num[:6]
@@ -42,6 +44,24 @@ def bin_check(bintype): # eight for 8 digit BIN, six for six digit BIN
 CARD_BIN = bin_check(six)
 
 # Calculate MII (Major industry identifier)
+def mii_check():
+    mii_base = {"ISO/TC 68 and other industry assignments": 0,
+                "Airlines": 1,
+                "Airlines, financial and other future industry assignments": 2,
+                "Travel and entertainment": 3,
+                "Banking and financial.": 4,
+                "Banking and financial": 5,
+                "Merchandising and banking/financial": 6,
+                "Petroleum and other future industry assignments": 7,
+                "Healthcare, telecommunications and other future industry assignments": 8,
+                "For assignment by national standards bodies": 9}
+
+    for key, value in mii_base.items():
+        if num[0] == value:
+            return key
+
+INDUSTRY = mii_check()
+
 # Calculate Card Brand (Visa, MasterCard, Maestro, etc.)
 # Card validation by Luhn Algorithm 
 
