@@ -63,9 +63,8 @@ def mii_check():
 INDUSTRY = mii_check()
 
 # Calculate Card Brand (Visa, MasterCard, Maestro, etc.)
-
-# Brands Database
 def card_brand():
+    # Brands Database
     brands_database = {"American Express": [34,37],
                         "China T-Union": [31],
                         "China UnionPay": [62],
@@ -96,6 +95,24 @@ def card_brand():
                         "UzCard": [8600],
                         "Humo": [9860],}
     card = str(CARD_NUMBER)
+
+    matches = []
+        for key, value in brands_database.items():
+            for item in value:
+                if card.startswith(str(item)):
+                    matches.append(item)
+                else:
+                    matches.append(0)
+        
+        for key, value in brands_database.items():
+            for item in value:
+                if item == max(matches):
+                    return key
+                else:
+                    return "Not found"
+
+BRAND = card_brand()
+
 
 
 # Card validation by Luhn Algorithm 
