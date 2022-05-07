@@ -113,9 +113,14 @@ def card_brand():
 
 BRAND = card_brand()
 
+# Card validation by Luhn Algorithm
+def check_luhn():
+        
+    odd_digs = num[-1::-2] # reversed digits from the end with step 2
+    even_digs = num[-2::-2] # reversed digits from the end+1 with step 2
 
-
-# Card validation by Luhn Algorithm 
+    odd_summ = 0
+    odd_summ = odd_summ + sum(odd_digs)
 
 # ONLINE CHECKS
 # Check internet connection
