@@ -122,6 +122,14 @@ def check_luhn():
     odd_summ = 0
     odd_summ = odd_summ + sum(odd_digs)
 
+    # we multiply each item in reversed_even_digits_list by 2, joining the digits, and converting it into integers
+    evensplitted = int("".join(map(str, [i * 2 for i in even_digs])))
+
+    # we add integers to list and take sum of them
+    even_summ = sum([int(a) for a in str(evensplitted)])
+
+    return (odd_summ + even_summ) % 10 == 0  # if sum of the numbers mod 10 is equal to 0 the card is valid
+
 # ONLINE CHECKS
 # Check internet connection
 # Search online database for Card country
