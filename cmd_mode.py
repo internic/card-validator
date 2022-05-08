@@ -130,6 +130,10 @@ def check_luhn():
 
     return (odd_summ + even_summ) % 10 == 0  # if sum of the numbers mod 10 is equal to 0 the card is valid
 
+if check_luhn():
+    print(f"Card number {CARD_NUMBER} is valid \nIIN/BIN number: {CARD_BIN} \nCard industry: {INDUSTRY} \nCard Brand: {BRAND} \n")
+
+
 # ONLINE CHECKS
 # Check internet connection
 # Search online database for Card country
