@@ -133,8 +133,24 @@ def check_luhn():
 if check_luhn():
     print(f"Card number {CARD_NUMBER} is valid \nIIN/BIN number: {CARD_BIN} \nCard industry: {INDUSTRY} \nCard Brand: {BRAND} \n")
 
+    # -----------------------------  ONLINE CHECKS ------------------------------ #
+    
+    # check internet connection
+    def connection_check():
+        url='http://www.google.com/'
+        timeout=5
+        try:
+            net = requests.get(url, timeout=timeout)
+            return True
+        except requests.ConnectionError:
+            print("Internet connection error")
+        return False
+    
+    if connection_check():
+        pass
 
-# ONLINE CHECKS
+
+
 # Check internet connection
 # Search online database for Card country
 # Search online database for Card currency
