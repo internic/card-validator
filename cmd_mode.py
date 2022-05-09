@@ -146,8 +146,16 @@ if check_luhn():
             print("Internet connection error")
         return False
     
-    if connection_check():
-        pass
+    if connection_check():  
+        try:
+            cardinfo = get(f"https://lookup.binlist.net/{CARD_BIN}", headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', "Accept-Version": "3"}).json()
+            
+            card_country = card_currency = card_bank = bank_url = bank_phone = "Not found"
+            
+            try:
+                card_country = cardinfo["country"]["name"]
+            except:
+                pass
 
 
 
