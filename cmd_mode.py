@@ -97,19 +97,19 @@ def card_brand():
     card = str(CARD_NUMBER)
 
     matches = []
-        for key, value in brands_database.items():
-            for item in value:
-                if card.startswith(str(item)):
-                    matches.append(item)
-                else:
-                    matches.append(0)
-        
-        for key, value in brands_database.items():
-            for item in value:
-                if item == max(matches):
-                    return key
-                else:
-                    return "Not found"
+    for key, value in brands_database.items():
+        for item in value:
+            if card.startswith(str(item)):
+                matches.append(item)
+            else:
+                matches.append(0)
+    
+    for key, value in brands_database.items():
+        for item in value:
+            if item == max(matches):
+                return key
+            else:
+                return "Not found"
 
 BRAND = card_brand()
 
