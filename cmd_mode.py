@@ -156,6 +156,25 @@ if check_luhn():
                 card_country = cardinfo["country"]["name"]
             except:
                 pass
+            try:
+                card_currency = cardinfo["country"]["currency"]
+            except:
+                pass
+
+            try:
+                card_bank = cardinfo["bank"]["name"]
+            except:
+                pass
+
+            try:
+                bank_url = cardinfo["bank"]["url"]
+            except:
+                pass
+
+            try:
+                bank_phone = cardinfo["bank"]["phone"]
+            except:
+                pass
 
 
 
