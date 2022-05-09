@@ -175,6 +175,8 @@ if check_luhn():
                 bank_phone = cardinfo["bank"]["phone"]
             except:
                 pass
+            
+            print(f"DATABASE SEARCH: \nCard Country: {card_country} \nCurrency: {card_currency} \nIssuing Bank: {card_bank} \nBank URL: {bank_url} \nBank contacts: {bank_phone}")
 
 
 
