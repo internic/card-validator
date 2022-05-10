@@ -32,3 +32,11 @@ window.geometry("645x327")
 window.configure(bg = "#FFFFFF")
 
 window.title("Payment Card Validator")
+
+# validate button
+def input_validation():
+    pass
+
+# help & info button
+def help_info():
+    pass
