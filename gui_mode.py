@@ -23,3 +23,12 @@ def relative_to_assets(path: str) -> Path:
 # Using custom font didn't success because python couldn't import pyglet
 #font.add_file(relative_to_assets("Inter-Regular.ttf"))
 #Inter_Regular = font.load('Inter Regular')
+
+# ---------------------------- GUI Mode --------------------------------- #
+# Main Window
+window = Tk()
+
+window.geometry("645x327")
+window.configure(bg = "#FFFFFF")
+
+window.title("Payment Card Validator")
