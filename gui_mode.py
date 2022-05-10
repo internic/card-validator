@@ -39,4 +39,9 @@ def input_validation():
 
 # help & info button
 def help_info():
-    pass
+    
+    # info window
+    eula_info = Toplevel()
+    eula_info.geometry("492x396")
+    eula_info.configure(bg = "#FFFFFF")
+    eula_info.title("Info & help")
