@@ -45,3 +45,13 @@ def help_info():
     eula_info.geometry("492x396")
     eula_info.configure(bg = "#FFFFFF")
     eula_info.title("Info & help")
+    
+    inf_canvas = Canvas(
+        eula_info,
+        bg = "#FFFFFF",
+        height = 396,
+        width = 492,
+        bd = 0,
+        highlightthickness = 0,
+        relief = "ridge"
+    )
