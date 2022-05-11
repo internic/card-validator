@@ -102,3 +102,14 @@ canvas = Canvas(
     highlightthickness = 0,
     relief = "ridge"
 )
+
+canvas.place(x = 0, y = 0)
+button_image_1 = PhotoImage(
+    file=relative_to_assets("button_1.png"))
+button_1 = Button(
+    image=button_image_1,
+    borderwidth=0,
+    highlightthickness=0,
+    command=input_validation,
+    relief="flat"
+)
