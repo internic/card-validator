@@ -113,3 +113,9 @@ button_1 = Button(
     command=input_validation,
     relief="flat"
 )
+button_1.place(
+    x=443.0,
+    y=191.0,
+    width=170.0,
+    height=35.0
+)
