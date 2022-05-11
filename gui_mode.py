@@ -92,3 +92,13 @@ def help_info():
     )
     eula_info.resizable(False, False)
     eula_info.mainloop()
+    
+canvas = Canvas(
+    window,
+    bg = "#FFFFFF",
+    height = 327,
+    width = 645,
+    bd = 0,
+    highlightthickness = 0,
+    relief = "ridge"
+)
