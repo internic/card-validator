@@ -55,3 +55,13 @@ def help_info():
         highlightthickness = 0,
         relief = "ridge"
     )
+
+    inf_canvas.place(x = 0, y = 0)
+    inf_canvas.create_text(
+        45.0,
+        92.0,
+        anchor="nw",
+        text="This software is a tool for checking the validity of Payment Card \nNumbers (PCN/PAN). Payment Cards are numbered in accordance with \nthe ISO/IEC 7812 Standard. The validity of Payment Cards is checked \nby a special algorithm for calculating the checksum, called the Luhn \nAlgorithm. This software provides the ability to check the numbers of \npotential Payment Cards for compliance with the Luhn Algorithm and \nalso calculates the following data:\n\nIssuer Identifier Number / Bank Identification Number\nMajor Industry Identifier\nCard Brand (Payment System I.E. Visa, Mastercard Etc.)\n\nUsing IIN/BIN Number, the following data is retrieved from a public database:\n\nCountry Of Issue Of Payment Card\nCurrency\nCard Issuing Bank\nIssuing Bank Contact Information (Website, Phone, Etc.)",
+        fill="#060405",
+        font=("Inter Regular", 12 * -1)
+    )
