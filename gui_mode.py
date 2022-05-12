@@ -119,3 +119,13 @@ button_1.place(
     width=170.0,
     height=35.0
 )
+
+button_image_2 = PhotoImage(
+    file=relative_to_assets("button_2.png"))
+button_2 = Button(
+    image=button_image_2,
+    borderwidth=0,
+    highlightthickness=0,
+    command=help_info,
+    relief="flat"
+)
