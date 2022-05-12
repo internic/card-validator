@@ -152,3 +152,11 @@ image_1 = canvas.create_image(
     163.0,
     image=image_image_1
 )
+
+entry_image_1 = PhotoImage(
+    file=relative_to_assets("entry_1.png"))
+entry_bg_1 = canvas.create_image(
+    528.0,
+    150.5,
+    image=entry_image_1
+)
