@@ -129,3 +129,9 @@ button_2 = Button(
     command=help_info,
     relief="flat"
 )
+button_2.place(
+    x=443.0,
+    y=242.0,
+    width=170.0,
+    height=35.0
+)
