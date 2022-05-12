@@ -166,3 +166,9 @@ entry_1 = Entry(
     bg="#FFFFFF",
     highlightthickness=0
 )
+entry_1.place(
+    x=448.0,
+    y=137.0,
+    width=160.0,
+    height=29.0
+)
