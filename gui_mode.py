@@ -135,3 +135,12 @@ button_2.place(
     width=170.0,
     height=35.0
 )
+
+canvas.create_text(
+    443.0,
+    102.0,
+    anchor="nw",
+    text="ENTER YOUR CARD NUMBER:",
+    fill="#060405",
+    font=("Inter Regular", 12 * -1)
+)
