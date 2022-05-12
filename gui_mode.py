@@ -144,3 +144,11 @@ canvas.create_text(
     fill="#060405",
     font=("Inter Regular", 12 * -1)
 )
+
+image_image_1 = PhotoImage(
+    file=relative_to_assets("image_1.png"))
+image_1 = canvas.create_image(
+    223.0,
+    163.0,
+    image=image_image_1
+)
