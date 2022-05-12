@@ -160,3 +160,9 @@ entry_bg_1 = canvas.create_image(
     150.5,
     image=entry_image_1
 )
+
+entry_1 = Entry(
+    bd=0,
+    bg="#FFFFFF",
+    highlightthickness=0
+)
