@@ -35,7 +35,14 @@ window.title("Payment Card Validator")
 
 # validate button
 def input_validation():
-    pass
+    
+    #print("Validate button clicked")
+    if len(entry_1.get()) >= 11 and int(entry_1.get()) != 0:
+
+        global CARD_NUMBER
+        CARD_NUMBER = entry_1.get()
+
+        num = [int(x) for x in str(CARD_NUMBER)] # convert integers to list
 
 # help & info button
 def help_info():
@@ -181,3 +188,5 @@ canvas.create_text(
     fill="#060405",
     font=("Inter Black", 19 * -1)
 )
+
+# ----------------------------------------------------------------------- #
