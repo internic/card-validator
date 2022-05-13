@@ -48,6 +48,11 @@ def input_validation():
         eight = num[:8]
         six = num[:6]     
         
+        # Calculate Card BIN number
+        def bin_check(bintype): # eight for 8 digit BIN, six for six digit BIN
+            return int("".join([str(i) for i in bintype]))
+
+        CARD_BIN = bin_check(six)
            
 
 # help & info button
