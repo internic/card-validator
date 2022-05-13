@@ -44,9 +44,11 @@ def input_validation():
 
         num = [int(x) for x in str(CARD_NUMBER)] # convert integers to list
 
-    # Calculate IIN (Issuer Identification Number) / BIN (Bank identification number)
+        # Calculate IIN (Issuer Identification Number) / BIN (Bank identification number)
         eight = num[:8]
-        six = num[:6]        
+        six = num[:6]     
+        
+           
 
 # help & info button
 def help_info():
@@ -192,5 +194,14 @@ canvas.create_text(
     fill="#060405",
     font=("Inter Black", 19 * -1)
 )
+
+# GUI mode input isdigit validation
+def check_input(inp):
+    if inp.isdigit() and len(inp) <= 19:
+        return True
+    elif inp == "":
+        return True
+    else:
+        return False
 
 # ----------------------------------------------------------------------- #
