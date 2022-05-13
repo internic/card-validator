@@ -204,4 +204,10 @@ def check_input(inp):
     else:
         return False
 
+digit_validation = window.register(check_input)
+entry_1.config(validate="key", validatecommand=(digit_validation, "%P"))
+
+window.resizable(False, False)
+window.mainloop()
+
 # ----------------------------------------------------------------------- #
