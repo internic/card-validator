@@ -44,6 +44,10 @@ def input_validation():
 
         num = [int(x) for x in str(CARD_NUMBER)] # convert integers to list
 
+    # Calculate IIN (Issuer Identification Number) / BIN (Bank identification number)
+        eight = num[:8]
+        six = num[:6]        
+
 # help & info button
 def help_info():
     
