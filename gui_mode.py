@@ -172,3 +172,12 @@ entry_1.place(
     width=160.0,
     height=29.0
 )
+
+canvas.create_text(
+    443.0,
+    31.0,
+    anchor="nw",
+    text="CARD \nVALIDATOR",
+    fill="#060405",
+    font=("Inter Black", 19 * -1)
+)
