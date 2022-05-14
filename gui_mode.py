@@ -209,6 +209,16 @@ def input_validation():
         def more_info_resizer():
             validate_window.geometry("492x396") # size change after clicking more info button, default value 492x396 
             more_info_btn.destroy() # deleting button after click
+            
+            # Making visible additional information
+            subw_canvas.create_text(
+                45.0,
+                233.0,
+                anchor="nw",
+                text=f"CARD COUNTRY: {card_country}",
+                fill="#060405",
+                font=("Inter Regular", 12 * -1)
+            )
 
 
 
