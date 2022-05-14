@@ -159,6 +159,35 @@ def input_validation():
                 except requests.ConnectionError:
                     messagebox.showerror("Connection Error", "Internet connection error")
                 return False
+            
+            if connection_check():
+                try:
+                    cardinfo = get(f"https://lookup.binlist.net/{CARD_BIN}", headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', "Accept-Version": "3"}).json()
+                    
+                    try:
+                        card_country = cardinfo["country"]["name"]
+                    except:
+                        pass
+
+                    try:
+                        card_currency = cardinfo["country"]["currency"]
+                    except:
+                        pass
+
+                    try:
+                        card_bank = cardinfo["bank"]["name"]
+                    except:
+                        pass
+
+                    try:
+                        bank_url = cardinfo["bank"]["url"]
+                    except:
+                        pass
+
+                    try:
+                        bank_phone = cardinfo["bank"]["phone"]
+                    except:
+                        pass
 
 # help & info button
 def help_info():
