@@ -53,6 +53,25 @@ def input_validation():
             return int("".join([str(i) for i in bintype]))
 
         CARD_BIN = bin_check(six)
+
+        # Major industry identifier
+        def mii_check():
+            mii_base = {"ISO/TC 68 and other industry assignments": 0,
+                        "Airlines": 1,
+                        "Airlines, financial and other future industry assignments": 2,
+                        "Travel and entertainment": 3,
+                        "Banking and financial.": 4,
+                        "Banking and financial": 5,
+                        "Merchandising and banking/financial": 6,
+                        "Petroleum and other future industry assignments": 7,
+                        "Healthcare, telecommunications and other future industry assignments": 8,
+                        "For assignment by national standards bodies": 9}
+
+            for key, value in mii_base.items():
+                if num[0] == value:
+                    return key
+
+        INDUSTRY = mii_check()
            
 
 # help & info button
