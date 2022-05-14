@@ -148,7 +148,17 @@ def input_validation():
             STATUS = f"{CARD_NUMBER} IS VALID"
             
             # --------------------------- Online checks ------------------------------ #
-            pass   
+            
+            # check internet connection
+            def connection_check():
+                url='http://www.google.com/'
+                timeout=5
+                try:
+                    net = requests.get(url, timeout=timeout)
+                    return True
+                except requests.ConnectionError:
+                    messagebox.showerror("Connection Error", "Internet connection error")
+                return False
 
 # help & info button
 def help_info():
