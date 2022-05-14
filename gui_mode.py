@@ -107,6 +107,25 @@ def input_validation():
                             "Humo": [9860],}
             
             card = str(CARD_NUMBER)
+            
+            matches = [-1]
+            for key, value in brands_database.items():
+                for item in value:
+                    if card.startswith(str(item)):
+                        matches.append(item)
+                    else:
+                        pass
+            
+            for key, value in brands_database.items():
+                for item in value:
+                    if item == max(matches):
+                        return key
+                    else:
+                        pass
+
+        BRAND = card_brand()
+            
+            
            
 
 # help & info button
