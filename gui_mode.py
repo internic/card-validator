@@ -124,6 +124,22 @@ def input_validation():
                         pass
 
         BRAND = card_brand()
+        
+        # Card validation by Luhn Algorithm 
+        def check_luhn():
+            odd_digs = num[-1::-2] # reversed digits from the end with step 2
+            even_digs = num[-2::-2] # reversed digits from the end+1 with step 2
+
+            odd_summ = 0
+            odd_summ = odd_summ + sum(odd_digs)
+
+            # we multiply each item in reversed_even_digits_list by 2, joining the digits, and converting it into integers
+            evensplitted = int("".join(map(str, [i * 2 for i in even_digs])))
+            
+            # we add integers to list and take sum of them
+            even_summ = sum([int(a) for a in str(evensplitted)])
+            
+            return (odd_summ + even_summ) % 10 == 0  # if sum of the numbers mod 10 is equal to 0 the card is valid
             
             
            
