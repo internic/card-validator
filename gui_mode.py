@@ -205,6 +205,11 @@ def input_validation():
         validate_window.configure(bg = "#FFFFFF")
         validate_window.title("Card Validation")
 
+         # More info button resizing subwindow
+        def more_info_resizer():
+            validate_window.geometry("492x396") # size change after clicking more info button, default value 492x396 
+            more_info_btn.destroy() # deleting button after click
+
 
 
 # help & info button
