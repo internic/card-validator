@@ -141,8 +141,14 @@ def input_validation():
             
             return (odd_summ + even_summ) % 10 == 0  # if sum of the numbers mod 10 is equal to 0 the card is valid
             
-            
+        # Default status for online based variables
+        card_country = card_currency = card_bank = bank_url = bank_phone = "Not found"
            
+        if check_luhn():
+            STATUS = f"{CARD_NUMBER} IS VALID"
+            
+            # --------------------------- Online checks ------------------------------ #
+            pass   
 
 # help & info button
 def help_info():
