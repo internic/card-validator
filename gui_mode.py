@@ -72,6 +72,41 @@ def input_validation():
                     return key
 
         INDUSTRY = mii_check()
+
+        # Calculate Card Brand (Visa, MasterCard, Maestro, etc.)
+        def card_brand():
+            
+            brands_database = {"American Express": [34,37],
+                            "China T-Union": [31],
+                            "China UnionPay": [62],
+                            "Diners Club International": [36], 
+                            "Diners Club United States & Canada": [54],
+                            "Discover Card": [6011,65]+list(range(644,650)),
+                            "Discover Card & China UnionPay co-branded": list(range(622126,622926)),
+                            "UkrCard": list(range(60400100,60420100)),
+                            "RuPay": [60,65,81,82,508],
+                            "RuPay-JCB co-branded": [353,356],
+                            "InterPayment": [636],
+                            "InstaPayment": [637,638,639],
+                            "JCB": list(range(3528,3590)),
+                            "Laser": [6304, 6706, 6771, 6709],
+                            "Maestro UK": [6759, 676770, 676774],
+                            "Maestro": [5018, 5020, 5038, 5893, 6304, 6759, 6761, 6762, 6763],
+                            "Dankort": [5019],
+                            "Dankort & Visa co-branded": [4571],
+                            "Mir": list(range(2200,2205)),
+                            "NPS Pridnestrovie": list(range(6054740,6054745)),
+                            "MasterCard": list(range(2221,2721))+list(range(51,56)),
+                            "Troy": [65, 9792],
+                            "Visa": [4],
+                            "Visa Electron": [4026, 417500, 4508, 4844, 4913, 4917],
+                            "UATP": [1],
+                            "Verve": list(range(506099,506199))+list(range(650002,650028)),
+                            "LankaPay": [357111],
+                            "UzCard": [8600],
+                            "Humo": [9860],}
+            
+            card = str(CARD_NUMBER)
            
 
 # help & info button
