@@ -219,6 +219,15 @@ def input_validation():
                 fill="#060405",
                 font=("Inter Regular", 12 * -1)
             )
+            
+            subw_canvas.create_text(
+                45.0,
+                259.0,
+                anchor="nw",
+                text=f"CURRENCY: {card_currency}",
+                fill="#060405",
+                font=("Inter Regular", 12 * -1)
+            )
 
 
 
