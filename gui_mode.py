@@ -276,6 +276,13 @@ def input_validation():
             relief="flat"
         )
 
+        more_info_btn.place(
+            x=161.0,
+            y=247.0,
+            width=170.0,
+            height=35.0
+        )
+
 
 
 # help & info button
