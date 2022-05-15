@@ -255,6 +255,15 @@ def input_validation():
                 fill="#060405",
                 font=("Inter Bold", 12 * -1)
             )
+        subw_canvas = Canvas(
+            validate_window,
+            bg = "#FFFFFF",
+            height = 396,
+            width = 492,
+            bd = 0,
+            highlightthickness = 0,
+            relief = "ridge"
+        )
 
 
 
