@@ -265,6 +265,17 @@ def input_validation():
             relief = "ridge"
         )
 
+        subw_canvas.place(x = 0, y = 0)
+        more_info_btn_image = PhotoImage(
+            file=relative_to_assets("more_info_btn.png"))
+        more_info_btn = Button(validate_window,
+            image=more_info_btn_image,
+            borderwidth=0,
+            highlightthickness=0,
+            command=more_info_resizer,
+            relief="flat"
+        )
+
 
 
 # help & info button
