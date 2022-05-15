@@ -246,6 +246,15 @@ def input_validation():
                 fill="#060405",
                 font=("Inter Bold", 12 * -1)
             )
+            
+            subw_canvas.create_text(
+                45.0,
+                339.0,
+                anchor="nw",
+                text=f"BANK CONTACTS: {bank_phone}",
+                fill="#060405",
+                font=("Inter Bold", 12 * -1)
+            )
 
 
 
