@@ -344,6 +344,11 @@ def input_validation():
             image=image_decor_2
         )
 
+        validate_window.resizable(False, False)
+        validate_window.mainloop()
+
+        # --------------------------------------------------------------------------------------- #
+
 
         
         
