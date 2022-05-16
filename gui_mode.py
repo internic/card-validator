@@ -318,6 +318,17 @@ def input_validation():
             fill="#060405",
             font=("Inter Regular", 12 * -1)
         )
+
+        subw_canvas.create_text(
+            45.0,
+            31.0,
+            anchor="nw",
+            text="CARD \nVALIDATOR",
+            fill="#060405",
+            font=("Inter Black", 19 * -1)
+        )
+
+
         
         
 
