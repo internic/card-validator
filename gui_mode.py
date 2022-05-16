@@ -301,6 +301,15 @@ def input_validation():
             font=("Inter Regular", 12 * -1)
         )
         
+        subw_canvas.create_text(
+            45.0,
+            180.0,
+            anchor="nw",
+            text=f"CARD INDUSTRY:  {INDUSTRY}",
+            fill="#060405",
+            font=("Inter Regular", 12 * -1)
+        )
+        
         
 
 
