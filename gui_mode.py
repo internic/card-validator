@@ -348,12 +348,9 @@ def input_validation():
         validate_window.mainloop()
 
         # --------------------------------------------------------------------------------------- #
-
-
-        
-        
-
-
+    
+    else:
+        messagebox.showerror("Input Error", "Error: Make sure your input is 11 to 19 digits and not 0")
 
 # help & info button
 def help_info():
