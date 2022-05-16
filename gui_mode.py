@@ -292,6 +292,15 @@ def input_validation():
             font=("Inter Regular", 12 * -1)
         )
         
+        subw_canvas.create_text(
+            45.0,
+            155.0,
+            anchor="nw",
+            text=f"IIN/BIN NUMBER: {CARD_BIN}",
+            fill="#060405",
+            font=("Inter Regular", 12 * -1)
+        )
+        
         
 
 
