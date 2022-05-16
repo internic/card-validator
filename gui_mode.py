@@ -328,6 +328,22 @@ def input_validation():
             font=("Inter Black", 19 * -1)
         )
 
+        image_decor_1 = PhotoImage(
+            file=relative_to_assets("decor_1.png"))
+        decor_1 = subw_canvas.create_image(
+            336.0,
+            21.0,
+            image=image_decor_1
+        )
+
+        image_decor_2 = PhotoImage(
+            file=relative_to_assets("decor_2.png"))
+        decor_2 = subw_canvas.create_image(
+            14.0,
+            131.0,
+            image=image_decor_2
+        )
+
 
         
         
