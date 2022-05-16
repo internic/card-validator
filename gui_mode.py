@@ -282,6 +282,17 @@ def input_validation():
             width=170.0,
             height=35.0
         )
+        
+        subw_canvas.create_text(
+            45.0,
+            102.0,
+            anchor="nw",
+            text=f"YOUR CARD:  {STATUS}",
+            fill="#060405",
+            font=("Inter Regular", 12 * -1)
+        )
+        
+        
 
 
 
