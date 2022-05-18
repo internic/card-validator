@@ -1,1 +1,3 @@
-‘# Payment Card Validator Project’
+# Payment Card Validator Project
+
+This software is a tool for checking the validity of Payment Card Numbers (PCN/PAN). Payment Cards are numbered in accordance with the ISO/IEC 7812 Standard. The validity of Payment Cards is checked by a special algorithm for calculating the checksum, called the Luhn Algorithm. This software provides the ability to check the numbers of potential Payment Cards for compliance with the Luhn Algorithm and also calculates the following data: Issuer Identifier Number / Bank Identification Number Major Industry Identifier Card Brand (Payment System I.E. Visa, Mastercard Etc.) Using IIN/BIN Number, the following data is retrieved from a public database: Country Of Issue Of Payment Card Currency Card Issuing Bank Issuing Bank Contact Information (Website, Phone, Etc.)
